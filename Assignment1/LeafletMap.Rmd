@@ -1,0 +1,21 @@
+---
+title: "Leaflet Map"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(rgdal)    # GDAL bindings for loading GPX-data
+library(lubridate)
+library(leaflet)
+```
+
+## R Markdown
+
+```{r map}
+
+GPX_file <- "run.gpx"
+geodf <- readOGR(GPX_file, layer = "tracks", verbose = FALSE)
+leaflet() %>% addTiles() %>% addPolylines(data=geodf)
+```
