@@ -4,14 +4,14 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 library(dplyr)
 library(rgdal)    # GDAL bindings for loading GPX-data
 library(lubridate)
 library(leaflet)
 ```
 
-## R Markdown
+## October 11, 2016
 
 ```{r map}
 
